@@ -19,20 +19,14 @@ app.use(express.json());
 app.use(cookieParser());
 
 // Configure CORS based on environment
-if (process.env.NODE_ENV === 'production') {
-  // In production, no need for CORS as frontend and backend are on same origin
-  // But if needed, you can use:
-  app.use(cors({
-    origin: true, // Allow the server's origin
-    credentials: true
-  }));
-} else {
-  // In development, allow requests from frontend dev server
-  app.use(cors({
-    origin: 'http://localhost:5173',
-    credentials: true
-  }));
-}
+const allowedOrigins = process.env.NODE_ENV === 'production' 
+  ? [process.env.CLIENT_URL]
+  : ['http://localhost:5173']; 
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
 
 // API Endpoints
 app.get('/api', (req, res) => {
