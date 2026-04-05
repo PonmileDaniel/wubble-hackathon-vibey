@@ -36,8 +36,13 @@ if (process.env.NODE_ENV === 'production') {
 
 // API Endpoints
 app.get('/api', (req, res) => {
-  return res.status(200).send('Welcome to API');
+    res.send("API is running");
 });
+
+app.get('/api/health', (req, res) => {
+    res.status(200).json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
 app.use('/api/auth', authRouter)
 app.use('/api/song', songRoute)
 app.use('/api/listener', listenerRouter)
