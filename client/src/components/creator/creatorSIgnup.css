@@ -1,0 +1,134 @@
+.creator-container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .creator-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .creator-title {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+   
+  .creator-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+  }
+  
+  .creator-form {
+    margin-bottom: 20px;
+  }
+  
+  .creator-label {
+    display: block;
+    color: white;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  
+  .creator-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 0;
+    border: 2px solid rgba(216, 213, 213, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding-left: 44px;
+  }
+  .creator-input-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .creator-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+}
+
+   /* .creator-input:focus {
+    outline: none;
+    border-color: white;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+    padding: 12px 12px 12px 48px; 
+  }  */
+
+  .creator-input::placeholder {
+    color: rgba(255, 255, 255, 0.7); 
+    font-style: italic;
+  
+  }
+  
+  .creator-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .creator-button:hover {
+    background: rgba(255, 255, 255, 0.35);
+  }
+  
+  .creator-login-section {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    padding: 15px 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  .creator-login-link {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  
+  @media (max-width: 480px) {
+    .creator-container {
+      padding: 20px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+  
+    .creator-title {
+      font-size: 24px;
+    }
+  
+    .creator-subtitle {
+      font-size: 14px;
+    }
+  
+    .creator-button {
+      font-size: 15px;
+    }
+  
+    .creator-input {
+      font-size: 15px;
+    }
+  }
+
